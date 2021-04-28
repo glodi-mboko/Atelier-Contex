@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import Book from './Book'
+import Book from '../components/Book'
 import {BookContext} from '../context/BookContext'
 
 const BookList = () => {
@@ -8,9 +8,9 @@ const BookList = () => {
     return (
         <div>
             {
-                books.map(({author, title}, id) =>(
+                books.map(({author, title}) =>(
                     <div>
-                        <Book author={author} title={title} key={id}/>
+                        <Book author={author} title={title}/>
                     </div>
                 ))
             }
