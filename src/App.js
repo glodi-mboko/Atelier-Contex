@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from 'react'
+import BookList from './components/BookList';
+import Navbar from './components/Navbar';
+import { BookProvider } from './context/BookContext';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+const App = ()=>
+{
+  /* const [init, setInit]= useState([]);
+  const [copyInit, setCopyInit] = useState([])
+  
+  useEffect(()=>{
+
+    fetch("http://jsonplaceholder.typicode.com/users")
+    .then((responses)=> responses.json())
+    .then((dataSet)=>{
+      let value = dataSet.map(({id, name, email})=>{
+        return({id, name, email})
+      })
+      setInit(value)
+      setCopyInit(value)
+    })
+  }, []) */
+  
+  return(
+    <BookProvider>
+      <div>
+        <Navbar />
+        <BookList />
+      </div>
+    </BookProvider>
+    
+  )
 }
 
 export default App;
