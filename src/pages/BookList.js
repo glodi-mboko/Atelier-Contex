@@ -4,13 +4,13 @@ import {BookContext} from '../context/BookContext'
 
 const BookList = () => {
 
-    const [books, setBooks] = useContext(BookContext)
+    const [books] = useContext(BookContext)
     return (
         <div>
             {
-                books.map(({author, title}) =>(
+                books.map(({author, title}, index) =>(
                     <div>
-                        <Book author={author} title={title}/>
+                        <Book author={author} title={title} id={index} key={index}/>
                     </div>
                 ))
             }

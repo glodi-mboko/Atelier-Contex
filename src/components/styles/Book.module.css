@@ -1,0 +1,15 @@
+.book {
+  border-bottom: 1px crimson solid;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background-color: rgba(220, 20, 60, 0.185);
+}
+.btn {
+  background-color: crimson;
+  width: 80px;
+  height: 40px;
+  position: absolute;
+  right: 9px;
+  box-sizing: border-box;
+}
